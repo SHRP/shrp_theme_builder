@@ -48,5 +48,8 @@ public class Random {
         }
         return strs[rndm];
     }
+    static int gRandom(int value){
+        return ((int) (Math.random()*value));
+    }
 }
 

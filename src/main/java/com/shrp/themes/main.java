@@ -48,6 +48,8 @@ public class main extends javax.swing.JFrame {
         gbColorType = new javax.swing.ButtonGroup();
         dType = new javax.swing.ButtonGroup();
         nType = new javax.swing.ButtonGroup();
+        gAccSelector = new javax.swing.ButtonGroup();
+        gDashIcoRType = new javax.swing.ButtonGroup();
         mainBasePanel = new javax.swing.JPanel();
         topBar = new javax.swing.JPanel();
         minBtn = new javax.swing.JButton();
@@ -131,6 +133,13 @@ public class main extends javax.swing.JFrame {
         gaColor2S = new javax.swing.JSeparator();
         gradientButton = new javax.swing.JButton();
         jLabel22 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        gAvgAccent = new javax.swing.JRadioButton();
+        gPAccent = new javax.swing.JRadioButton();
+        gSAccent = new javax.swing.JRadioButton();
+        jLabel24 = new javax.swing.JLabel();
+        g6Color = new javax.swing.JRadioButton();
+        g3Color = new javax.swing.JRadioButton();
         configurationPanel = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -515,8 +524,8 @@ public class main extends javax.swing.JFrame {
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel14.setText("Primary text color");
-        chGradientColor.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 216, -1, -1));
+        jLabel14.setText("Dashboard Icon random type");
+        chGradientColor.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 286, -1, -1));
 
         gpTextColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gpTextColor.setForeground(new java.awt.Color(255, 255, 255));
@@ -719,6 +728,48 @@ public class main extends javax.swing.JFrame {
         jLabel22.setText("Accent color");
         chGradientColor.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 146, -1, -1));
 
+        jLabel23.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Primary text color");
+        chGradientColor.add(jLabel23, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 216, -1, -1));
+
+        gAvgAccent.setBackground(new java.awt.Color(28, 28, 40));
+        gAccSelector.add(gAvgAccent);
+        gAvgAccent.setForeground(new java.awt.Color(255, 255, 255));
+        gAvgAccent.setText("Avg");
+        chGradientColor.add(gAvgAccent, new org.netbeans.lib.awtextra.AbsoluteConstraints(455, 240, -1, -1));
+
+        gPAccent.setBackground(new java.awt.Color(28, 28, 40));
+        gAccSelector.add(gPAccent);
+        gPAccent.setForeground(new java.awt.Color(255, 255, 255));
+        gPAccent.setSelected(true);
+        gPAccent.setText("Primary");
+        chGradientColor.add(gPAccent, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, -1, -1));
+
+        gSAccent.setBackground(new java.awt.Color(28, 28, 40));
+        gAccSelector.add(gSAccent);
+        gSAccent.setForeground(new java.awt.Color(255, 255, 255));
+        gSAccent.setText("Secondary");
+        chGradientColor.add(gSAccent, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 240, -1, -1));
+
+        jLabel24.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("Main accent color");
+        chGradientColor.add(jLabel24, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 216, -1, -1));
+
+        g6Color.setBackground(new java.awt.Color(28, 28, 40));
+        gDashIcoRType.add(g6Color);
+        g6Color.setForeground(new java.awt.Color(255, 255, 255));
+        g6Color.setText("6 colors");
+        chGradientColor.add(g6Color, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, -1, -1));
+
+        g3Color.setBackground(new java.awt.Color(28, 28, 40));
+        gDashIcoRType.add(g3Color);
+        g3Color.setForeground(new java.awt.Color(255, 255, 255));
+        g3Color.setSelected(true);
+        g3Color.setText("3 colors");
+        chGradientColor.add(g3Color, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 310, -1, -1));
+
         mainBasePanel.add(chGradientColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 540, 570));
         chGradientColor.setVisible(false);
 
@@ -874,7 +925,7 @@ public class main extends javax.swing.JFrame {
 
         helpSubTxt3.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         helpSubTxt3.setForeground(new java.awt.Color(255, 255, 255));
-        helpSubTxt3.setText("TRBL: TopLeft to BottomRight");
+        helpSubTxt3.setText("TRBL: TopRight to BottomLeft");
 
         helpSubTxt4.setFont(new java.awt.Font("Arial", 0, 12)); // NOI18N
         helpSubTxt4.setForeground(new java.awt.Color(255, 255, 255));
@@ -907,10 +958,10 @@ public class main extends javax.swing.JFrame {
                 .addComponent(helpSubTxt3)
                 .addGap(11, 11, 11)
                 .addComponent(helpSubTxt4)
-                .addContainerGap(340, Short.MAX_VALUE))
+                .addContainerGap(110, Short.MAX_VALUE))
         );
 
-        mainBasePanel.add(helpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 200, 470));
+        mainBasePanel.add(helpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 200, 240));
         helpPanel.setVisible(false);
         helpPanel.setBackground(null);
 
@@ -1180,6 +1231,26 @@ public class main extends javax.swing.JFrame {
             return 0;
         }
     }
+    int getDashIcoRType(){
+        if(g3Color.isSelected()){
+            return 1;
+        }else if(g6Color.isSelected()){
+            return 2;
+        }else{
+            return 0;
+        }
+    }
+    int getGPrimaryAccColorType(){
+        if(gPAccent.isSelected()){
+            return 1;
+        }else if(gSAccent.isSelected()){
+            return 2;
+        }else if(gAvgAccent.isSelected()){
+            return 3;
+        }else{
+            return 0;
+        }
+    }
     boolean verifyData(){
         if(gradientColor){
             if(verifyColor(gbColor.getText())&&verifyColor(gaColor.getText())&&verifyColor(gpTextColor.getText())&&verifyColor(gsTextColor.getText())&&verifyColor(gdColor1.getText())&&verifyColor(gdColor2.getText())){
@@ -1233,10 +1304,11 @@ public class main extends javax.swing.JFrame {
     boolean genarateTheme()throws IOException{
         if(gradientColor){
             if(grandomDashBoardColor){
-                Operation Omega=new Operation(thName.getText(),gbColor.getText(),gaColor.getText(),gaColor2.getText(),gpTextColor.getText(),gsTextColor.getText(),gdColor1.getText(),gdColor2.getText(),gdColor3.getText(),gdColor4.getText(),gdColor5.getText(),gdColor6.getText(),getDType(),getNType(),getGType(),1);
+                Operation Omega=new Operation(thName.getText(),gbColor.getText(),gaColor.getText(),gaColor2.getText(),gpTextColor.getText(),gsTextColor.getText(),gdColor1.getText(),gdColor2.getText(),gdColor3.getText(),gdColor4.getText(),gdColor5.getText(),gdColor6.getText(),getDType(),getNType(),getGType(),1,getDashIcoRType(),getGPrimaryAccColorType());
                 Omega.genarateResource();
             }else{
-                Operation Omega=new Operation(thName.getText(),gbColor.getText(),gaColor.getText(),gaColor2.getText(),gpTextColor.getText(),gsTextColor.getText(),gdColor1.getText(),gdColor2.getText(),gdColor3.getText(),gdColor4.getText(),gdColor5.getText(),gdColor6.getText(),getDType(),getNType(),getGType(),0);
+                //Operation(String themeName,String backgroundColor,String accColor1,String accColor2,String textColor,String stextColor,String dIcoColor1,String dIcoColor2,int dashType,int navType,int gradientType,int rMode,int pAccColor)
+                Operation Omega=new Operation(thName.getText(),gbColor.getText(),gaColor.getText(),gaColor2.getText(),gpTextColor.getText(),gsTextColor.getText(),gdColor1.getText(),gdColor2.getText(),getDType(),getNType(),getGType(),0,getGPrimaryAccColorType());
                 Omega.genarateResource();
             }
         }else{
@@ -1309,6 +1381,13 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JRadioButton dIcoPlain;
     private javax.swing.ButtonGroup dType;
     private javax.swing.JButton executeBtn;
+    private javax.swing.JRadioButton g3Color;
+    private javax.swing.JRadioButton g6Color;
+    private javax.swing.ButtonGroup gAccSelector;
+    private javax.swing.JRadioButton gAvgAccent;
+    private javax.swing.ButtonGroup gDashIcoRType;
+    private javax.swing.JRadioButton gPAccent;
+    private javax.swing.JRadioButton gSAccent;
     private javax.swing.JTextField gaColor;
     private javax.swing.JSeparator gaColor1S;
     private javax.swing.JTextField gaColor2;
@@ -1351,6 +1430,8 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
     private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;

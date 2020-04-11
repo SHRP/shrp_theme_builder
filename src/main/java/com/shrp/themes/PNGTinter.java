@@ -71,15 +71,35 @@ class PngTinter{
       System.out.println(e);
     }
   }
-  void applyTint(String color1,String color2,String color3,String color4,String color5,String color6,int gType)throws IOException{//Normal Gradient Tint
+  void applyTint(String color1,String color2,String color3,String color4,String color5,String color6,int gType,int gDRtype)throws IOException{//Random Gradient Tint
     String fColor,sColor;
+    int tmp;
     try{
       File folder=new File(inDir);
       File files[]=folder.listFiles();
       for(File file:files){
         if(isPNG(file)){
-          fColor=Random.gRandom(color1,color2,color3,color4,color5,color6);
-          sColor=Random.gRandomExecpt(color1,color2,color3,color4,color5,color6,getIndex(fColor,color1,color2,color3,color4,color5,color6));
+            if(gDRtype==1){
+                tmp=Random.gRandom(3);
+                switch (tmp) {
+                    case 0:
+                        fColor=color1;
+                        sColor=color2;
+                        break;
+                    case 1:
+                        fColor=color3;
+                        sColor=color4;
+                        break;
+                    default:
+                        fColor=color5;
+                        sColor=color6;
+                        break;
+                }
+            }else{
+                fColor=Random.gRandom(color1,color2,color3,color4,color5,color6);
+                sColor=Random.gRandomExecpt(color1,color2,color3,color4,color5,color6,getIndex(fColor,color1,color2,color3,color4,color5,color6));
+            }
+          
           gradientControl(file,outDir,fColor,sColor,gType);
         }
       }

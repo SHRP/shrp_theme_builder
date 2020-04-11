@@ -29,9 +29,10 @@ Required class for execution - PNGTinter
 */
 public class Operation{
   String themeName,accColor1,accColor2,backgroundColor,textColor,stextColor,dIcoColor1,dIcoColor2,dIcoColor3,dIcoColor4,dIcoColor5,dIcoColor6;
-  int dashType,navType,gradientType,rMode;
+  int dashType,navType,gradientType,rMode,rDMode;
+  String primaryAccentColor;
   //Gradient + Random
-  Operation(String themeName,String backgroundColor,String accColor1,String accColor2,String textColor,String stextColor,String dIcoColor1,String dIcoColor2,String dIcoColor3,String dIcoColor4,String dIcoColor5,String dIcoColor6,int dashType,int navType,int gradientType,int rMode){
+  Operation(String themeName,String backgroundColor,String accColor1,String accColor2,String textColor,String stextColor,String dIcoColor1,String dIcoColor2,String dIcoColor3,String dIcoColor4,String dIcoColor5,String dIcoColor6,int dashType,int navType,int gradientType,int rMode,int rDMode,int pAccColor){
       this.themeName=themeName;
       this.backgroundColor=backgroundColor;
       this.accColor1=accColor1;
@@ -48,9 +49,21 @@ public class Operation{
       this.navType=navType;
       this.gradientType=gradientType;
       this.rMode=rMode;
+      this.rDMode=rDMode;
+      switch (pAccColor) {
+          case 1:
+              primaryAccentColor=accColor1;
+              break;
+          case 2:
+              primaryAccentColor=accColor2;
+              break;
+          default:
+              primaryAccentColor=getAvgColor(accColor1,accColor2);
+              break;
+      }
   }
   //Gradient only
-  Operation(String themeName,String backgroundColor,String accColor1,String accColor2,String textColor,String stextColor,String dIcoColor1,String dIcoColor2,int dashType,int navType,int gradientType,int rMode){
+  Operation(String themeName,String backgroundColor,String accColor1,String accColor2,String textColor,String stextColor,String dIcoColor1,String dIcoColor2,int dashType,int navType,int gradientType,int rMode,int pAccColor){
       this.themeName=themeName;
       this.backgroundColor=backgroundColor;
       this.accColor1=accColor1;
@@ -63,6 +76,17 @@ public class Operation{
       this.navType=navType;
       this.gradientType=gradientType;
       this.rMode=rMode;
+      switch (pAccColor) {
+          case 1:
+              primaryAccentColor=accColor1;
+              break;
+          case 2:
+              primaryAccentColor=accColor2;
+              break;
+          default:
+              primaryAccentColor=getAvgColor(accColor1,accColor2);
+              break;
+      }
   }
   
   //Plain + Random
@@ -81,6 +105,7 @@ public class Operation{
       this.dashType=dashType;
       this.navType=navType;
       this.rMode=rMode;
+      primaryAccentColor=accColor1;
   }
   
   //Plain only
@@ -94,7 +119,12 @@ public class Operation{
       this.dashType=dashType;
       this.navType=navType;
       this.rMode=rMode;
+      primaryAccentColor=accColor1;
   }
+
+    Operation(String text, String text0, String text1, String text2, String text3, String text4, String text5, String text6, String text7, String text8, String text9, String text10, int dType, int nType, int gType, int i) {
+        throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
+    }
   boolean genarateResource()throws IOException{
       buildEnv();
       patchStockFile();
@@ -112,7 +142,7 @@ public class Operation{
     dir=new File("out\\res\\");
     dir.mkdir();
     FileWriter mData = new FileWriter("out\\st.prop");
-    mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\naccColor="+accColor1+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
+    mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\naccColor="+primaryAccentColor+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
     mData.flush();
     mData.close();
   }
@@ -135,9 +165,12 @@ public class Operation{
       case 3:
         p=new PngTinter("files\\dIco\\dt3\\","out\\res\\");
         break;
+      case 4:
+        p=new PngTinter("files\\dIco\\dt4\\","out\\res\\");
+        break;
     }
     if(rMode==1&&gradientType!=0){
-        p.applyTint(dIcoColor1,dIcoColor2,dIcoColor3,dIcoColor4,dIcoColor5,dIcoColor6,gradientType);
+        p.applyTint(dIcoColor1,dIcoColor2,dIcoColor3,dIcoColor4,dIcoColor5,dIcoColor6,gradientType,rDMode);
     }else if(rMode==1&&gradientType==0){
         p.applyTint(dIcoColor1,dIcoColor2,dIcoColor3,dIcoColor4,dIcoColor5,dIcoColor6);
     }else if(rMode==0&&gradientType!=0){
@@ -164,6 +197,32 @@ public class Operation{
     }else{
         p.applyTint(accColor1);
     }
+  }
+  static String getAvgColor(String c1,String c2){
+    int r,g,b;
+    int r2,g2,b2;
+    if(c1.length()>8){
+      r=Integer.parseInt(c1.substring(3,5),16);
+      g=Integer.parseInt(c1.substring(5,7),16);
+      b=Integer.parseInt(c1.substring(7,9),16);
+    }else{
+      r=Integer.parseInt(c1.substring(1,3),16);
+      g=Integer.parseInt(c1.substring(3,5),16);
+      b=Integer.parseInt(c1.substring(5,7),16);
+    }
+    if(c1.length()>8){
+      r2=Integer.parseInt(c2.substring(3,5),16);
+      g2=Integer.parseInt(c2.substring(5,7),16);
+      b2=Integer.parseInt(c2.substring(7,9),16);
+    }else{
+      r2=Integer.parseInt(c2.substring(1,3),16);
+      g2=Integer.parseInt(c2.substring(3,5),16);
+      b2=Integer.parseInt(c2.substring(5,7),16);
+    }
+    r=(r+r2)/2;
+    g=(g+g2)/2;
+    b=(b+b2)/2;
+    return ("#"+Integer.toHexString(r)+Integer.toHexString(g)+Integer.toHexString(b));
   }
 }
 
