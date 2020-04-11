@@ -92,6 +92,7 @@ public class main extends javax.swing.JFrame {
         dColor6S = new javax.swing.JSeparator();
         dColor6 = new javax.swing.JTextField();
         plainNextBtn = new javax.swing.JButton();
+        jLabel21 = new javax.swing.JLabel();
         chGradientColor = new javax.swing.JPanel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
@@ -129,6 +130,7 @@ public class main extends javax.swing.JFrame {
         gaColor2 = new javax.swing.JTextField();
         gaColor2S = new javax.swing.JSeparator();
         gradientButton = new javax.swing.JButton();
+        jLabel22 = new javax.swing.JLabel();
         configurationPanel = new javax.swing.JPanel();
         jLabel18 = new javax.swing.JLabel();
         jLabel19 = new javax.swing.JLabel();
@@ -257,86 +259,109 @@ public class main extends javax.swing.JFrame {
         mainBasePanel.add(sideBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, -1, -1));
 
         chPlainColor.setBackground(new java.awt.Color(28, 28, 40));
-        chPlainColor.setForeground(new java.awt.Color(255, 255, 255));
+        chPlainColor.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel4.setBackground(new java.awt.Color(28, 28, 40));
         jLabel4.setFont(new java.awt.Font("Steradian Regular", 0, 24)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("Choose color");
+        chPlainColor.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 11, 268, 54));
 
         jLabel6.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("Background color");
+        chPlainColor.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 76, -1, -1));
 
-        bColor.setBackground(null);
         bColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         bColor.setForeground(new java.awt.Color(255, 255, 255));
         bColor.setText("#FFFFFF");
         bColor.setBorder(null);
         bColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         bColor.setOpaque(false);
+        chPlainColor.add(bColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 100, 196, 23));
+        bColor.setBackground(null);
 
-        jSeparator1.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator1.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator1.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 125, 196, 10));
 
         jLabel7.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 255));
         jLabel7.setText("Accent color");
+        chPlainColor.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 146, -1, -1));
 
-        aColor.setBackground(null);
         aColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         aColor.setForeground(new java.awt.Color(255, 255, 255));
         aColor.setText("#FFFFFF");
         aColor.setBorder(null);
         aColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         aColor.setOpaque(false);
+        chPlainColor.add(aColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 170, 196, 23));
+        aColor.setBackground(null);
 
-        jSeparator2.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator2.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator2.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 195, 196, 10));
 
-        jSeparator3.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator3.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator3.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 265, 196, 10));
 
         jLabel8.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel8.setForeground(new java.awt.Color(255, 255, 255));
         jLabel8.setText("Primary text color");
+        chPlainColor.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 216, -1, -1));
 
-        pTextColor.setBackground(null);
         pTextColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         pTextColor.setForeground(new java.awt.Color(255, 255, 255));
         pTextColor.setText("#FFFFFF");
         pTextColor.setBorder(null);
         pTextColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         pTextColor.setOpaque(false);
+        chPlainColor.add(pTextColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 240, 196, 23));
+        pTextColor.setBackground(null);
 
-        sTextColor.setBackground(null);
         sTextColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         sTextColor.setForeground(new java.awt.Color(255, 255, 255));
         sTextColor.setText("#FFFFFF");
         sTextColor.setBorder(null);
         sTextColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         sTextColor.setOpaque(false);
+        chPlainColor.add(sTextColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 310, 196, 23));
+        sTextColor.setBackground(null);
 
-        jSeparator4.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator4.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator4.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(jSeparator4, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 335, 196, 10));
 
         jLabel9.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Secondary text color");
+        chPlainColor.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 286, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel10.setForeground(new java.awt.Color(255, 255, 255));
         jLabel10.setText("Dashboard icon color");
+        chPlainColor.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 351, -1, -1));
 
-        dColor1.setBackground(null);
         dColor1.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor1.setForeground(new java.awt.Color(255, 255, 255));
         dColor1.setText("#FFFFFF");
         dColor1.setBorder(null);
         dColor1.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor1.setOpaque(false);
+        chPlainColor.add(dColor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 380, 196, 23));
+        dColor1.setBackground(null);
 
-        dColor1S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor1S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor1S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor1S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 405, 196, 10));
 
         dColorLabel.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         dColorLabel.setForeground(new java.awt.Color(255, 255, 255));
         dColorLabel.setText("Simple");
+        chPlainColor.add(dColorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 351, 69, -1));
 
         jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/toggleOff.png"))); // NOI18N
         jLabel5.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -344,56 +369,82 @@ public class main extends javax.swing.JFrame {
                 jLabel5MouseClicked(evt);
             }
         });
+        chPlainColor.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 351, -1, -1));
 
-        dColor2.setBackground(null);
         dColor2.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor2.setForeground(new java.awt.Color(255, 255, 255));
         dColor2.setText("#FFFFFF");
         dColor2.setBorder(null);
         dColor2.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor2.setOpaque(false);
+        chPlainColor.add(dColor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 380, 196, 23));
+        dColor2.setVisible(false);
+        dColor2.setBackground(null);
 
-        dColor2S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor2S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor2S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor2S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 405, 196, 10));
+        dColor2S.setVisible(false);
 
-        dColor3.setBackground(null);
         dColor3.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor3.setForeground(new java.awt.Color(255, 255, 255));
         dColor3.setText("#FFFFFF");
         dColor3.setBorder(null);
         dColor3.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor3.setOpaque(false);
+        chPlainColor.add(dColor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 426, 196, 23));
+        dColor3.setVisible(false);
+        dColor3.setBackground(null);
 
-        dColor3S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor3S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor3S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor3S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 451, 196, 10));
+        dColor3S.setVisible(false);
 
-        dColor4S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor4S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor4S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor4S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 451, 196, 10));
+        dColor4S.setVisible(false);
 
-        dColor4.setBackground(null);
         dColor4.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor4.setForeground(new java.awt.Color(255, 255, 255));
         dColor4.setText("#FFFFFF");
         dColor4.setBorder(null);
         dColor4.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor4.setOpaque(false);
+        chPlainColor.add(dColor4, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 426, 196, 23));
+        dColor4.setVisible(false);
+        dColor4.setBackground(null);
 
-        dColor5S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor5S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor5S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor5S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 497, 196, 10));
+        dColor5S.setVisible(false);
 
-        dColor5.setBackground(null);
         dColor5.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor5.setForeground(new java.awt.Color(255, 255, 255));
         dColor5.setText("#FFFFFF");
         dColor5.setBorder(null);
         dColor5.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor5.setOpaque(false);
+        chPlainColor.add(dColor5, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 472, 196, 23));
+        dColor5.setVisible(false);
+        dColor5.setBackground(null);
 
-        dColor6S.setBackground(new java.awt.Color(204, 204, 255));
+        dColor6S.setBackground(new java.awt.Color(28, 28, 40));
+        dColor6S.setForeground(new java.awt.Color(51, 51, 51));
+        chPlainColor.add(dColor6S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 497, 196, 10));
+        dColor6S.setVisible(false);
 
-        dColor6.setBackground(null);
         dColor6.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         dColor6.setForeground(new java.awt.Color(255, 255, 255));
         dColor6.setText("#FFFFFF");
         dColor6.setBorder(null);
         dColor6.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         dColor6.setOpaque(false);
+        chPlainColor.add(dColor6, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 472, 196, 23));
+        dColor6.setVisible(false);
+        dColor6.setBackground(null);
 
         plainNextBtn.setForeground(new java.awt.Color(255, 255, 255));
         plainNextBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/btn.png"))); // NOI18N
@@ -404,226 +455,118 @@ public class main extends javax.swing.JFrame {
                 plainNextBtnActionPerformed(evt);
             }
         });
+        chPlainColor.add(plainNextBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, -1, 24));
 
-        javax.swing.GroupLayout chPlainColorLayout = new javax.swing.GroupLayout(chPlainColor);
-        chPlainColor.setLayout(chPlainColorLayout);
-        chPlainColorLayout.setHorizontalGroup(
-            chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chPlainColorLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9)
-                    .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator4, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(sTextColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel8)
-                    .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator3, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(pTextColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel7)
-                    .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator2, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(aColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(jLabel6)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                        .addComponent(jSeparator1, javax.swing.GroupLayout.Alignment.LEADING)
-                        .addComponent(bColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))
-                    .addGroup(chPlainColorLayout.createSequentialGroup()
-                        .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel10)
-                                .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(dColor1S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dColor1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(dColor3S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(dColor3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(dColor5S, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(dColor5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(80, 80, 80)
-                        .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(dColor6S)
-                            .addComponent(dColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dColor2S)
-                            .addComponent(dColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(chPlainColorLayout.createSequentialGroup()
-                                .addComponent(dColorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jLabel5))
-                            .addComponent(dColor4S)
-                            .addComponent(dColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chPlainColorLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(plainNextBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap())
-        );
-        chPlainColorLayout.setVerticalGroup(
-            chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chPlainColorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(bColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator1, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(aColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator2, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel8)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(pTextColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator3, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel9)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sTextColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(2, 2, 2)
-                .addComponent(jSeparator4, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel5)
-                    .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(jLabel10)
-                        .addComponent(dColorLabel)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chPlainColorLayout.createSequentialGroup()
-                        .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(chPlainColorLayout.createSequentialGroup()
-                                .addComponent(dColor1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(dColor1S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(chPlainColorLayout.createSequentialGroup()
-                                .addComponent(dColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(dColor2S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(chPlainColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(chPlainColorLayout.createSequentialGroup()
-                                .addComponent(dColor3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(dColor3S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(chPlainColorLayout.createSequentialGroup()
-                                .addComponent(dColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(dColor4S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(dColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(dColor5S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chPlainColorLayout.createSequentialGroup()
-                        .addComponent(dColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(dColor6S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(plainNextBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(26, Short.MAX_VALUE))
-        );
-
-        dColor2.setVisible(false);
-        dColor2S.setVisible(false);
-        dColor3.setVisible(false);
-        dColor3S.setVisible(false);
-        dColor4S.setVisible(false);
-        dColor4.setVisible(false);
-        dColor5S.setVisible(false);
-        dColor5.setVisible(false);
-        dColor6S.setVisible(false);
-        dColor6.setVisible(false);
+        jLabel21.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        chPlainColor.add(jLabel21, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 508, 401, 35));
 
         mainBasePanel.add(chPlainColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 540, 570));
 
         chGradientColor.setBackground(new java.awt.Color(28, 28, 40));
         chGradientColor.setForeground(new java.awt.Color(255, 255, 255));
+        chGradientColor.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel11.setBackground(new java.awt.Color(28, 28, 40));
         jLabel11.setFont(new java.awt.Font("Steradian Regular", 0, 24)); // NOI18N
         jLabel11.setForeground(new java.awt.Color(255, 255, 255));
         jLabel11.setText("Choose color");
+        chGradientColor.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 11, 268, 54));
 
         jLabel12.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel12.setForeground(new java.awt.Color(255, 255, 255));
         jLabel12.setText("Background color");
+        chGradientColor.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 76, -1, -1));
 
-        gbColor.setBackground(null);
         gbColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gbColor.setForeground(new java.awt.Color(255, 255, 255));
         gbColor.setText("#FFFFFF");
         gbColor.setBorder(null);
         gbColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gbColor.setOpaque(false);
+        chGradientColor.add(gbColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 100, 196, 23));
+        gbColor.setBackground(null);
 
-        jSeparator5.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator5.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator5.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(jSeparator5, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 125, 196, 10));
 
         jLabel13.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel13.setText("Accent color");
+        jLabel13.setText("Second accent color");
+        chGradientColor.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 146, -1, -1));
 
-        gaColor.setBackground(null);
         gaColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gaColor.setForeground(new java.awt.Color(255, 255, 255));
         gaColor.setText("#FFFFFF");
         gaColor.setBorder(null);
         gaColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gaColor.setOpaque(false);
+        chGradientColor.add(gaColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 170, 196, 23));
+        gaColor.setBackground(null);
 
-        gaColor1S.setBackground(new java.awt.Color(204, 204, 255));
+        gaColor1S.setBackground(new java.awt.Color(28, 28, 40));
+        gaColor1S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gaColor1S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 195, 196, 10));
 
-        jSeparator7.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator7.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator7.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(jSeparator7, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 265, 196, 10));
 
         jLabel14.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("Primary text color");
+        chGradientColor.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 216, -1, -1));
 
-        gpTextColor.setBackground(null);
         gpTextColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gpTextColor.setForeground(new java.awt.Color(255, 255, 255));
         gpTextColor.setText("#FFFFFF");
         gpTextColor.setBorder(null);
         gpTextColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gpTextColor.setOpaque(false);
+        chGradientColor.add(gpTextColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 240, 196, 23));
+        gpTextColor.setBackground(null);
 
-        gsTextColor.setBackground(null);
         gsTextColor.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gsTextColor.setForeground(new java.awt.Color(255, 255, 255));
         gsTextColor.setText("#FFFFFF");
         gsTextColor.setBorder(null);
         gsTextColor.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gsTextColor.setOpaque(false);
+        chGradientColor.add(gsTextColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 310, 196, 23));
+        gsTextColor.setBackground(null);
 
-        jSeparator8.setBackground(new java.awt.Color(204, 204, 255));
+        jSeparator8.setBackground(new java.awt.Color(28, 28, 40));
+        jSeparator8.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(jSeparator8, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 335, 196, 10));
 
         jLabel15.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
         jLabel15.setText("Secondary text color");
+        chGradientColor.add(jLabel15, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 286, -1, -1));
 
         jLabel16.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel16.setForeground(new java.awt.Color(255, 255, 255));
         jLabel16.setText("Dashboard icon color");
+        chGradientColor.add(jLabel16, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 351, -1, -1));
 
-        gdColor1.setBackground(null);
         gdColor1.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor1.setForeground(new java.awt.Color(255, 255, 255));
         gdColor1.setText("#FFFFFF");
         gdColor1.setBorder(null);
         gdColor1.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor1.setOpaque(false);
+        chGradientColor.add(gdColor1, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 380, 196, 23));
+        gdColor1.setBackground(null);
 
-        gdColor1S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor1S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor1S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor1S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 405, 196, 10));
 
         gdColorLabel.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         gdColorLabel.setForeground(new java.awt.Color(255, 255, 255));
         gdColorLabel.setText("Simple");
+        chGradientColor.add(gdColorLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 351, 77, -1));
 
         gcolorSwitch.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/toggleOff.png"))); // NOI18N
         gcolorSwitch.addMouseListener(new java.awt.event.MouseAdapter() {
@@ -631,102 +574,134 @@ public class main extends javax.swing.JFrame {
                 gcolorSwitchMouseClicked(evt);
             }
         });
+        chGradientColor.add(gcolorSwitch, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 351, -1, -1));
 
-        gdColor2.setBackground(null);
         gdColor2.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor2.setForeground(new java.awt.Color(255, 255, 255));
         gdColor2.setText("#FFFFFF");
         gdColor2.setBorder(null);
         gdColor2.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor2.setOpaque(false);
+        chGradientColor.add(gdColor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 380, 196, 23));
+        gdColor2.setBackground(null);
 
-        gdColor2S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor2S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor2S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor2S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 405, 196, 10));
 
-        gdColor3.setBackground(null);
         gdColor3.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor3.setForeground(new java.awt.Color(255, 255, 255));
         gdColor3.setText("#FFFFFF");
         gdColor3.setBorder(null);
         gdColor3.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor3.setOpaque(false);
+        chGradientColor.add(gdColor3, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 426, 196, 23));
+        gdColor3.setVisible(false);
+        gdColor3.setBackground(null);
 
-        gdColor3S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor3S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor3S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor3S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 451, 196, 10));
+        gdColor3S.setVisible(false);
 
-        gdColor4S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor4S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor4S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor4S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 451, 196, 10));
+        gdColor4S.setVisible(false);
 
-        gdColor4.setBackground(null);
         gdColor4.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor4.setForeground(new java.awt.Color(255, 255, 255));
         gdColor4.setText("#FFFFFF");
         gdColor4.setBorder(null);
         gdColor4.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor4.setOpaque(false);
+        chGradientColor.add(gdColor4, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 426, 196, 23));
+        gdColor4.setVisible(false);
+        gdColor4.setBackground(null);
 
-        gdColor5S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor5S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor5S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor5S, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 497, 196, 10));
+        gdColor5S.setVisible(false);
 
-        gdColor5.setBackground(null);
         gdColor5.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor5.setForeground(new java.awt.Color(255, 255, 255));
         gdColor5.setText("#FFFFFF");
         gdColor5.setBorder(null);
         gdColor5.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor5.setOpaque(false);
+        chGradientColor.add(gdColor5, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 472, 196, 23));
+        gdColor5.setVisible(false);
+        gdColor5.setBackground(null);
 
-        gdColor6S.setBackground(new java.awt.Color(204, 204, 255));
+        gdColor6S.setBackground(new java.awt.Color(28, 28, 40));
+        gdColor6S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gdColor6S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 497, 196, 10));
+        gdColor6S.setVisible(false);
 
-        gdColor6.setBackground(null);
         gdColor6.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gdColor6.setForeground(new java.awt.Color(255, 255, 255));
         gdColor6.setText("#FFFFFF");
         gdColor6.setBorder(null);
         gdColor6.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gdColor6.setOpaque(false);
+        chGradientColor.add(gdColor6, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 472, 196, 23));
+        gdColor6.setVisible(false);
+        gdColor6.setBackground(null);
 
-        lrBtn.setBackground(null);
         gbColorType.add(lrBtn);
         lrBtn.setForeground(new java.awt.Color(255, 255, 255));
         lrBtn.setText("LR");
         lrBtn.setToolTipText("");
         lrBtn.setBorder(null);
         lrBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        chGradientColor.add(lrBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 525, 53, -1));
+        lrBtn.setBackground(null);
 
-        tbBtn.setBackground(null);
         gbColorType.add(tbBtn);
         tbBtn.setForeground(new java.awt.Color(255, 255, 255));
         tbBtn.setText("TB");
         tbBtn.setToolTipText("");
         tbBtn.setBorder(null);
         tbBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        chGradientColor.add(tbBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(191, 525, 53, -1));
+        tbBtn.setBackground(null);
 
-        tlbrBtn.setBackground(null);
         gbColorType.add(tlbrBtn);
         tlbrBtn.setForeground(new java.awt.Color(255, 255, 255));
         tlbrBtn.setText("TLBR");
         tlbrBtn.setToolTipText("");
         tlbrBtn.setBorder(null);
         tlbrBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        chGradientColor.add(tlbrBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(309, 525, 63, -1));
+        tlbrBtn.setBackground(null);
 
-        trblBtn.setBackground(null);
         gbColorType.add(trblBtn);
         trblBtn.setForeground(new java.awt.Color(255, 255, 255));
         trblBtn.setText("TRBL");
         trblBtn.setToolTipText("");
         trblBtn.setBorder(null);
         trblBtn.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        chGradientColor.add(trblBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 525, 53, -1));
+        trblBtn.setBackground(null);
 
         jLabel17.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel17.setForeground(new java.awt.Color(255, 255, 255));
         jLabel17.setText("Gradient Type");
+        chGradientColor.add(jLabel17, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 523, -1, -1));
 
-        gaColor2.setBackground(null);
         gaColor2.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         gaColor2.setForeground(new java.awt.Color(255, 255, 255));
         gaColor2.setText("#FFFFFF");
         gaColor2.setBorder(null);
         gaColor2.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         gaColor2.setOpaque(false);
+        chGradientColor.add(gaColor2, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 170, 196, 23));
+        gaColor2.setBackground(null);
 
-        gaColor2S.setBackground(new java.awt.Color(204, 204, 255));
+        gaColor2S.setBackground(new java.awt.Color(28, 28, 40));
+        gaColor2S.setForeground(new java.awt.Color(51, 51, 51));
+        chGradientColor.add(gaColor2S, new org.netbeans.lib.awtextra.AbsoluteConstraints(299, 195, 196, 10));
 
         gradientButton.setForeground(new java.awt.Color(255, 255, 255));
         gradientButton.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/btn.png"))); // NOI18N
@@ -737,193 +712,35 @@ public class main extends javax.swing.JFrame {
                 gradientButtonActionPerformed(evt);
             }
         });
+        chGradientColor.add(gradientButton, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, -1, 24));
 
-        javax.swing.GroupLayout chGradientColorLayout = new javax.swing.GroupLayout(chGradientColor);
-        chGradientColor.setLayout(chGradientColorLayout);
-        chGradientColorLayout.setHorizontalGroup(
-            chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chGradientColorLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                        .addComponent(jLabel17)
-                        .addGap(18, 18, 18)
-                        .addComponent(lrBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tbBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(trblBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(tlbrBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addContainerGap())
-                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(jLabel16)
-                                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(gdColor1S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gdColor1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(gdColor3S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gdColor3, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(gdColor5S, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(gdColor5, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator5, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(gbColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 196, Short.MAX_VALUE))
-                            .addComponent(jLabel15)
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator8, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(gsTextColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel12)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel14)
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(jSeparator7, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(gpTextColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                .addComponent(gaColor1S, javax.swing.GroupLayout.Alignment.LEADING)
-                                .addComponent(gaColor, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel13))
-                        .addGap(8, 8, 8)
-                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(chGradientColorLayout.createSequentialGroup()
-                                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING, false)
-                                    .addComponent(gaColor2S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gaColor2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chGradientColorLayout.createSequentialGroup()
-                                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                                        .addGap(0, 0, Short.MAX_VALUE)
-                                        .addComponent(gradientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addComponent(gdColor6S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gdColor2S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(gdColor4S, javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chGradientColorLayout.createSequentialGroup()
-                                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                            .addComponent(gdColor6, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(gdColor2, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addComponent(gdColor4, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                            .addGroup(javax.swing.GroupLayout.Alignment.LEADING, chGradientColorLayout.createSequentialGroup()
-                                                .addComponent(gdColorLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 77, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                                .addGap(18, 18, 18)
-                                                .addComponent(gcolorSwitch)))
-                                        .addGap(0, 0, Short.MAX_VALUE)))
-                                .addGap(201, 201, 201))))))
-        );
-        chGradientColorLayout.setVerticalGroup(
-            chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(chGradientColorLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel12)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(gbColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(1, 1, 1)
-                .addComponent(jSeparator5, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(11, 11, 11)
-                .addComponent(jLabel13)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                        .addComponent(gaColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(gaColor1S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                        .addComponent(gaColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(gaColor2S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addGap(11, 11, 11)
-                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                        .addComponent(jLabel14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(gpTextColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(jSeparator7, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jLabel15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(gsTextColor, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(2, 2, 2)
-                        .addComponent(jSeparator8, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(gcolorSwitch)
-                            .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                .addComponent(jLabel16)
-                                .addComponent(gdColorLabel)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chGradientColorLayout.createSequentialGroup()
-                                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                                        .addComponent(gdColor1, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(2, 2, 2)
-                                        .addComponent(gdColor1S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                                        .addComponent(gdColor2, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(2, 2, 2)
-                                        .addComponent(gdColor2S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                                        .addComponent(gdColor3, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(2, 2, 2)
-                                        .addComponent(gdColor3S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                    .addGroup(chGradientColorLayout.createSequentialGroup()
-                                        .addComponent(gdColor4, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                        .addGap(2, 2, 2)
-                                        .addComponent(gdColor4S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(gdColor5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(gdColor5S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, chGradientColorLayout.createSequentialGroup()
-                                .addComponent(gdColor6, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(2, 2, 2)
-                                .addComponent(gdColor6S, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(chGradientColorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(jLabel17)
-                            .addComponent(lrBtn)
-                            .addComponent(tbBtn)
-                            .addComponent(trblBtn)
-                            .addComponent(tlbrBtn)))
-                    .addComponent(gradientButton, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(35, Short.MAX_VALUE))
-        );
-
-        gdColor3.setVisible(false);
-        gdColor3S.setVisible(false);
-        gdColor4S.setVisible(false);
-        gdColor4.setVisible(false);
-        gdColor5S.setVisible(false);
-        gdColor5.setVisible(false);
-        gdColor6S.setVisible(false);
-        gdColor6.setVisible(false);
+        jLabel22.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("Accent color");
+        chGradientColor.add(jLabel22, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 146, -1, -1));
 
         mainBasePanel.add(chGradientColor, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 540, 570));
         chGradientColor.setVisible(false);
 
         configurationPanel.setBackground(new java.awt.Color(28, 28, 40));
         configurationPanel.setForeground(new java.awt.Color(255, 255, 255));
+        configurationPanel.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel18.setBackground(new java.awt.Color(28, 28, 40));
         jLabel18.setFont(new java.awt.Font("Steradian Regular", 0, 24)); // NOI18N
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Configuration");
+        configurationPanel.add(jLabel18, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 11, 268, 54));
 
         jLabel19.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel19.setForeground(new java.awt.Color(255, 255, 255));
         jLabel19.setText("Dashboard icon style");
+        configurationPanel.add(jLabel19, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 146, -1, -1));
 
         jLabel20.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Nav-Bar Icon style");
+        configurationPanel.add(jLabel20, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 211, -1, -1));
 
         executeBtn.setForeground(new java.awt.Color(255, 255, 255));
         executeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/executeBtn.png"))); // NOI18N
@@ -934,48 +751,56 @@ public class main extends javax.swing.JFrame {
                 executeBtnActionPerformed(evt);
             }
         });
+        configurationPanel.add(executeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(430, 520, -1, 24));
 
-        dIcoDefault.setBackground(null);
         dType.add(dIcoDefault);
         dIcoDefault.setForeground(new java.awt.Color(255, 255, 255));
         dIcoDefault.setText("Default");
         dIcoDefault.setBorder(null);
+        configurationPanel.add(dIcoDefault, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 175, -1, -1));
+        dIcoDefault.setBackground(null);
 
-        dIcoMaterial.setBackground(null);
         dType.add(dIcoMaterial);
         dIcoMaterial.setForeground(new java.awt.Color(255, 255, 255));
         dIcoMaterial.setText("Material");
         dIcoMaterial.setBorder(null);
+        configurationPanel.add(dIcoMaterial, new org.netbeans.lib.awtextra.AbsoluteConstraints(90, 175, -1, -1));
+        dIcoMaterial.setBackground(null);
 
-        dIcoPlain.setBackground(null);
         dType.add(dIcoPlain);
         dIcoPlain.setForeground(new java.awt.Color(255, 255, 255));
         dIcoPlain.setText("Plain");
         dIcoPlain.setBorder(null);
+        configurationPanel.add(dIcoPlain, new org.netbeans.lib.awtextra.AbsoluteConstraints(155, 175, -1, -1));
+        dIcoPlain.setBackground(null);
 
-        nIcoPie.setBackground(null);
         nType.add(nIcoPie);
         nIcoPie.setForeground(new java.awt.Color(255, 255, 255));
         nIcoPie.setText("Pie");
         nIcoPie.setBorder(null);
+        configurationPanel.add(nIcoPie, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 240, -1, -1));
+        nIcoPie.setBackground(null);
 
-        nIcoNxtbit.setBackground(null);
         nType.add(nIcoNxtbit);
         nIcoNxtbit.setForeground(new java.awt.Color(255, 255, 255));
         nIcoNxtbit.setText("Nxt-Bit");
         nIcoNxtbit.setBorder(null);
+        configurationPanel.add(nIcoNxtbit, new org.netbeans.lib.awtextra.AbsoluteConstraints(69, 240, -1, -1));
+        nIcoNxtbit.setBackground(null);
 
-        nIcoSamsung.setBackground(null);
         nType.add(nIcoSamsung);
         nIcoSamsung.setForeground(new java.awt.Color(255, 255, 255));
         nIcoSamsung.setText("Samsung");
         nIcoSamsung.setBorder(null);
+        configurationPanel.add(nIcoSamsung, new org.netbeans.lib.awtextra.AbsoluteConstraints(132, 240, -1, -1));
+        nIcoSamsung.setBackground(null);
 
-        nIcoCustom.setBackground(null);
         nType.add(nIcoCustom);
         nIcoCustom.setForeground(new java.awt.Color(255, 255, 255));
         nIcoCustom.setText("Custom");
         nIcoCustom.setBorder(null);
+        configurationPanel.add(nIcoCustom, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 240, -1, -1));
+        nIcoCustom.setBackground(null);
 
         prevBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/prevBtn.png"))); // NOI18N
         prevBtn.setBorder(null);
@@ -985,31 +810,37 @@ public class main extends javax.swing.JFrame {
                 prevBtnActionPerformed(evt);
             }
         });
+        configurationPanel.add(prevBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 520, -1, 24));
 
         mExecuteStatus.setBackground(new java.awt.Color(28, 28, 40));
         mExecuteStatus.setFont(new java.awt.Font("Steradian Regular", 0, 24)); // NOI18N
         mExecuteStatus.setForeground(new java.awt.Color(255, 255, 255));
         mExecuteStatus.setText("Ready");
+        configurationPanel.add(mExecuteStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 284, 268, 54));
 
         sExecuteStatus.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         sExecuteStatus.setForeground(new java.awt.Color(255, 255, 255));
         sExecuteStatus.setText("Click Execute to generate the theme.");
+        configurationPanel.add(sExecuteStatus, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 344, -1, -1));
 
         thNameLabel.setFont(new java.awt.Font("Arial", 0, 15)); // NOI18N
         thNameLabel.setForeground(new java.awt.Color(255, 255, 255));
         thNameLabel.setText("Theme name");
+        configurationPanel.add(thNameLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 76, -1, -1));
 
-        thName.setBackground(null);
         thName.setFont(new java.awt.Font("Product Sans", 0, 12)); // NOI18N
         thName.setForeground(new java.awt.Color(255, 255, 255));
         thName.setText("Goon Theme");
         thName.setBorder(null);
         thName.setDisabledTextColor(new java.awt.Color(204, 204, 204));
         thName.setOpaque(false);
+        configurationPanel.add(thName, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 100, 196, 23));
+        thName.setBackground(null);
 
-        thNameS.setBackground(new java.awt.Color(204, 204, 255));
+        thNameS.setBackground(new java.awt.Color(28, 28, 40));
+        thNameS.setForeground(new java.awt.Color(51, 51, 51));
+        configurationPanel.add(thNameS, new org.netbeans.lib.awtextra.AbsoluteConstraints(23, 125, 196, 10));
 
-        cleanupBtn.setBackground(null);
         cleanupBtn.setForeground(new java.awt.Color(255, 255, 255));
         cleanupBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/cleanupBtn.png"))); // NOI18N
         cleanupBtn.setBorder(null);
@@ -1019,84 +850,7 @@ public class main extends javax.swing.JFrame {
                 cleanupBtnActionPerformed(evt);
             }
         });
-
-        javax.swing.GroupLayout configurationPanelLayout = new javax.swing.GroupLayout(configurationPanel);
-        configurationPanel.setLayout(configurationPanelLayout);
-        configurationPanelLayout.setHorizontalGroup(
-            configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(configurationPanelLayout.createSequentialGroup()
-                .addGap(23, 23, 23)
-                .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(configurationPanelLayout.createSequentialGroup()
-                        .addComponent(prevBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(cleanupBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(18, 18, 18)
-                        .addComponent(executeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(configurationPanelLayout.createSequentialGroup()
-                        .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(thNameS, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(thName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(thNameLabel)
-                            .addComponent(sExecuteStatus)
-                            .addComponent(mExecuteStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addGroup(configurationPanelLayout.createSequentialGroup()
-                                .addComponent(nIcoPie)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nIcoNxtbit)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nIcoSamsung)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(nIcoCustom))
-                            .addGroup(configurationPanelLayout.createSequentialGroup()
-                                .addComponent(dIcoDefault)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dIcoMaterial)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(dIcoPlain))
-                            .addComponent(jLabel19)
-                            .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 268, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel20))
-                        .addGap(0, 239, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        configurationPanelLayout.setVerticalGroup(
-            configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(configurationPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(thNameLabel)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(thName, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(3, 3, 3)
-                .addComponent(thNameS, javax.swing.GroupLayout.PREFERRED_SIZE, 10, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jLabel19)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(dIcoDefault)
-                    .addComponent(dIcoMaterial)
-                    .addComponent(dIcoPlain))
-                .addGap(25, 25, 25)
-                .addComponent(jLabel20)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(nIcoPie)
-                    .addComponent(nIcoNxtbit)
-                    .addComponent(nIcoSamsung)
-                    .addComponent(nIcoCustom))
-                .addGap(29, 29, 29)
-                .addComponent(mExecuteStatus, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(sExecuteStatus)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
-                .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(executeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(prevBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(cleanupBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(29, 29, 29))
-        );
+        configurationPanel.add(cleanupBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, -1, 24));
 
         mainBasePanel.add(configurationPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 540, 570));
         configurationPanel.setVisible(false);
@@ -1105,8 +859,6 @@ public class main extends javax.swing.JFrame {
         versionLabel.setForeground(new java.awt.Color(255, 255, 255));
         versionLabel.setText("ver 2.3 beta");
         mainBasePanel.add(versionLabel, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 590, 70, -1));
-
-        helpPanel.setBackground(null);
 
         helpHeader.setFont(new java.awt.Font("Arial", 0, 18)); // NOI18N
         helpHeader.setForeground(new java.awt.Color(255, 255, 255));
@@ -1160,6 +912,7 @@ public class main extends javax.swing.JFrame {
 
         mainBasePanel.add(helpPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 70, 200, 470));
         helpPanel.setVisible(false);
+        helpPanel.setBackground(null);
 
         closeBtn1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/closeBtn.png"))); // NOI18N
         closeBtn1.setBorderPainted(false);
@@ -1502,6 +1255,20 @@ public class main extends javax.swing.JFrame {
       Runtime run = Runtime.getRuntime();
       run.exec("cleanup.exe");
     }
+    void colorParse(String color){
+        if(color.length()>8){
+            alpha=Integer.parseInt(color.substring(1,3),16);
+            red=Integer.parseInt(color.substring(3,5),16);
+            green=Integer.parseInt(color.substring(5,7),16);
+            blue=Integer.parseInt(color.substring(7,9),16);
+        }else{
+            alpha=255;
+            red=Integer.parseInt(color.substring(1,3),16);
+            green=Integer.parseInt(color.substring(3,5),16);
+            blue=Integer.parseInt(color.substring(5,7),16);
+        }
+    }
+    int alpha,red,green,blue;
     Color primaryBgColor=new Color(28,28,40);
     Color normalColor=new Color(255,255,255);
     Color failedColor=new Color(255,113,144);
@@ -1582,6 +1349,8 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
