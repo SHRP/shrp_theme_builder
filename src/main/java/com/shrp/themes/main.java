@@ -147,6 +147,7 @@ public class main extends javax.swing.JFrame {
         thNameLabel = new javax.swing.JLabel();
         thName = new javax.swing.JTextField();
         thNameS = new javax.swing.JSeparator();
+        cleanupBtn = new javax.swing.JButton();
         versionLabel = new javax.swing.JLabel();
         helpPanel = new javax.swing.JPanel();
         helpHeader = new javax.swing.JLabel();
@@ -191,7 +192,6 @@ public class main extends javax.swing.JFrame {
 
         mainBasePanel.add(topBar, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 0, 520, 40));
 
-        minBtn.setBackground(null);
         minBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/min.png"))); // NOI18N
         minBtn.setBorderPainted(false);
         minBtn.setContentAreaFilled(false);
@@ -201,7 +201,7 @@ public class main extends javax.swing.JFrame {
                 minBtnActionPerformed(evt);
             }
         });
-        mainBasePanel.add(minBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(870, 10, -1, -1));
+        mainBasePanel.add(minBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(887, 10, 30, -1));
 
         appLogo.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/shrpLogo.png"))); // NOI18N
         mainBasePanel.add(appLogo, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 14, -1, 20));
@@ -925,7 +925,6 @@ public class main extends javax.swing.JFrame {
         jLabel20.setForeground(new java.awt.Color(255, 255, 255));
         jLabel20.setText("Nav-Bar Icon style");
 
-        executeBtn.setBackground(null);
         executeBtn.setForeground(new java.awt.Color(255, 255, 255));
         executeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/executeBtn.png"))); // NOI18N
         executeBtn.setBorder(null);
@@ -1010,19 +1009,31 @@ public class main extends javax.swing.JFrame {
 
         thNameS.setBackground(new java.awt.Color(204, 204, 255));
 
+        cleanupBtn.setBackground(null);
+        cleanupBtn.setForeground(new java.awt.Color(255, 255, 255));
+        cleanupBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/cleanupBtn.png"))); // NOI18N
+        cleanupBtn.setBorder(null);
+        cleanupBtn.setBorderPainted(false);
+        cleanupBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cleanupBtnActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout configurationPanelLayout = new javax.swing.GroupLayout(configurationPanel);
         configurationPanel.setLayout(configurationPanelLayout);
         configurationPanelLayout.setHorizontalGroup(
             configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(configurationPanelLayout.createSequentialGroup()
+                .addGap(23, 23, 23)
                 .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, configurationPanelLayout.createSequentialGroup()
-                        .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(configurationPanelLayout.createSequentialGroup()
                         .addComponent(prevBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(cleanupBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(18, 18, 18)
                         .addComponent(executeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 67, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(configurationPanelLayout.createSequentialGroup()
-                        .addGap(23, 23, 23)
                         .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(thNameS, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(thName, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -1082,7 +1093,8 @@ public class main extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 155, Short.MAX_VALUE)
                 .addGroup(configurationPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(executeBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(prevBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(prevBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(cleanupBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 24, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(29, 29, 29))
         );
 
@@ -1158,7 +1170,7 @@ public class main extends javax.swing.JFrame {
                 closeBtn1ActionPerformed(evt);
             }
         });
-        mainBasePanel.add(closeBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(910, 10, -1, -1));
+        mainBasePanel.add(closeBtn1, new org.netbeans.lib.awtextra.AbsoluteConstraints(927, 10, 30, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -1288,8 +1300,9 @@ public class main extends javax.swing.JFrame {
     }//GEN-LAST:event_prevBtnActionPerformed
 
     private void executeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_executeBtnActionPerformed
+        mExecuteStatus.setForeground(normalColor);
+        mExecuteStatus.setText("Processing");
         if(verifyData()){
-            mExecuteStatus.setText("Processing");
             try {
                 genarateTheme();
                 
@@ -1297,8 +1310,9 @@ public class main extends javax.swing.JFrame {
                 Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
             } finally{
                 mExecuteStatus.setForeground(successColor);
+                sExecuteStatus.setForeground(normalColor);
                 mExecuteStatus.setText("Done");
-                sExecuteStatus.setText("Theme genarated Successfully");
+                sExecuteStatus.setText("Theme generated Successfully");
             }
         }else{
             mExecuteStatus.setForeground(failedColor);
@@ -1322,6 +1336,20 @@ public class main extends javax.swing.JFrame {
     private void closeBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtn1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_closeBtn1ActionPerformed
+
+    private void cleanupBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cleanupBtnActionPerformed
+        Runtime run=Runtime.getRuntime();
+        try {
+            run.exec("cleanup.exe");
+        } catch (IOException ex) {
+            Logger.getLogger(main.class.getName()).log(Level.SEVERE, null, ex);
+        }finally{
+            mExecuteStatus.setForeground(normalColor);
+            sExecuteStatus.setForeground(normalColor);
+            mExecuteStatus.setText("Ready");
+            sExecuteStatus.setText("Cleanup Completed");
+        }
+    }//GEN-LAST:event_cleanupBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1470,9 +1498,14 @@ public class main extends javax.swing.JFrame {
         
         return true;
     }
+    void cleanupTask() throws IOException{
+      Runtime run = Runtime.getRuntime();
+      run.exec("cleanup.exe");
+    }
     Color primaryBgColor=new Color(28,28,40);
-    Color failedColor=new Color(255,57,100);
-    Color successColor=new Color(0,200,55);
+    Color normalColor=new Color(255,255,255);
+    Color failedColor=new Color(255,113,144);
+    Color successColor=new Color(0,255,169);
     boolean randomDashBoardColor=false;
     boolean grandomDashBoardColor=false;
     boolean gradientColor=false;
@@ -1485,6 +1518,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JTextField bColor;
     private javax.swing.JPanel chGradientColor;
     private javax.swing.JPanel chPlainColor;
+    private javax.swing.JButton cleanupBtn;
     private javax.swing.JButton closeBtn1;
     private javax.swing.JSeparator colorSelected;
     private javax.swing.JLabel colorTypeSwitcher;

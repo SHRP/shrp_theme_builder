@@ -132,10 +132,7 @@ class PngTinter{
   boolean isPNG(File file){
     String targetPath=file.toString();
     String extension=targetPath.substring(targetPath.lastIndexOf(".")+1,targetPath.length());
-    if(extension.equals("png")||extension.equals("PNG")){
-      return true;
-    }
-    return false;
+    return extension.equals("png")||extension.equals("PNG");
   }
   void tinter(File file,String outDir)throws IOException{
     int p,a,r,g,b;

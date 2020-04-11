@@ -96,15 +96,10 @@ public class Operation{
       this.rMode=rMode;
   }
   boolean genarateResource()throws IOException{
-      initialTask();
       buildEnv();
       patchStockFile();
       finalTask();
       return true;
-  }
-  void initialTask() throws IOException{
-      Runtime run = Runtime.getRuntime();
-      run.exec("cleanup.exe");
   }
   void finalTask() throws IOException{
       Runtime run = Runtime.getRuntime();
@@ -114,35 +109,31 @@ public class Operation{
   void buildEnv()throws IOException{//Creates Build Env
     File dir=new File("out");
     dir.mkdir();
-    dir=new File("out/res/");
+    dir=new File("out\\res\\");
     dir.mkdir();
-    try{
-        try (FileWriter mData = new FileWriter("out/st.prop")) {
-            mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\naccColor="+accColor1+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
-            mData.close();
-        }
-    }catch(IOException e){
-      System.out.println(e);
-    }
+    FileWriter mData = new FileWriter("out\\st.prop");
+    mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\naccColor="+accColor1+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
+    mData.flush();
+    mData.close();
   }
   void patchStockFile()throws IOException{
-    PngTinter p=new PngTinter("files/accRes/","out/res/");
+    PngTinter p=new PngTinter("files\\accRes\\","out\\res\\");
     if(gradientType!=0){
         p.applyTint(accColor1,accColor2,gradientType);
     }else{
         p.applyTint(accColor1);
     }
-    p=new PngTinter("files/bgRes/","out/res/");
+    p=new PngTinter("files\\bgRes\\","out\\res\\");
     p.applyTint(backgroundColor);
     switch(dashType){
       case 1:
-        p=new PngTinter("files/dIco/dt1/","out/res/");
+        p=new PngTinter("files\\dIco\\dt1\\","out\\res\\");
         break;
       case 2:
-        p=new PngTinter("files/dIco/dt2/","out/res/");
+        p=new PngTinter("files\\dIco\\dt2\\","out\\res\\");
         break;
       case 3:
-        p=new PngTinter("files/dIco/dt3/","out/res/");
+        p=new PngTinter("files\\dIco\\dt3\\","out\\res\\");
         break;
     }
     if(rMode==1&&gradientType!=0){
@@ -156,17 +147,16 @@ public class Operation{
     }
     switch(navType){
       case 1:
-        p=new PngTinter("files/nIco/nt1/","out/res/");
-        p.applyTint(accColor1);
+        p=new PngTinter("files\\nIco\\nt1\\","out\\res\\");
         break;
       case 2:
-        p=new PngTinter("files/nIco/nt2/","out/res/");
+        p=new PngTinter("files\\nIco\\nt2\\","out\\res\\");
         break;
       case 3:
-        p=new PngTinter("files/nIco/nt3/","out/res");
+        p=new PngTinter("files\\nIco\\nt3\\","out\\res\\");
         break;
       case 4:
-        p=new PngTinter("files/nIco/nt3/","out/res/");
+        p=new PngTinter("files\\nIco\\nt4\\","out\\res\\");
         break;
     }
     if(gradientType!=0){
