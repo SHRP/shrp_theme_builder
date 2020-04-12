@@ -159,6 +159,7 @@ public class main extends javax.swing.JFrame {
         thName = new javax.swing.JTextField();
         thNameS = new javax.swing.JSeparator();
         cleanupBtn = new javax.swing.JButton();
+        dIcoPlainL = new javax.swing.JRadioButton();
         versionLabel = new javax.swing.JLabel();
         helpPanel = new javax.swing.JPanel();
         helpHeader = new javax.swing.JLabel();
@@ -850,7 +851,7 @@ public class main extends javax.swing.JFrame {
         nIcoCustom.setForeground(new java.awt.Color(255, 255, 255));
         nIcoCustom.setText("Custom");
         nIcoCustom.setBorder(null);
-        configurationPanel.add(nIcoCustom, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 240, -1, -1));
+        configurationPanel.add(nIcoCustom, new org.netbeans.lib.awtextra.AbsoluteConstraints(209, 240, -1, -1));
         nIcoCustom.setBackground(null);
 
         prevBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/res/prevBtn.png"))); // NOI18N
@@ -902,6 +903,14 @@ public class main extends javax.swing.JFrame {
             }
         });
         configurationPanel.add(cleanupBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 520, -1, 24));
+
+        dIcoPlainL.setBackground(new java.awt.Color(28, 28, 40));
+        dType.add(dIcoPlainL);
+        dIcoPlainL.setForeground(new java.awt.Color(255, 255, 255));
+        dIcoPlainL.setText("Plain Large");
+        dIcoPlainL.setBorder(null);
+        configurationPanel.add(dIcoPlainL, new org.netbeans.lib.awtextra.AbsoluteConstraints(207, 175, -1, -1));
+        dIcoPlain.setBackground(null);
 
         mainBasePanel.add(configurationPanel, new org.netbeans.lib.awtextra.AbsoluteConstraints(230, 40, 540, 570));
         configurationPanel.setVisible(false);
@@ -1189,7 +1198,15 @@ public class main extends javax.swing.JFrame {
     }
     boolean verifyColor(String color){
         if(color.length()==7||color.length()==9){
-            return color.charAt(0)=='#';
+            int x=1;
+            char ch;
+            while(x<color.length()){
+                ch=color.charAt(x++);
+                if(!(color.charAt(0)=='#'&&(ch=='A'||ch=='a'||ch=='B'||ch=='b'||ch=='C'||ch=='c'||ch=='D'||ch=='d'||ch=='E'||ch=='e'||ch=='F'||ch=='f'||ch=='0'||ch=='1'||ch=='2'||ch=='3'||ch=='4'||ch=='5'||ch=='6'||ch=='7'||ch=='8'||ch=='9'))){
+                    return false;
+                }
+            }
+            return true;
         }else{
             return false;
         }
@@ -1201,6 +1218,8 @@ public class main extends javax.swing.JFrame {
             return 2;
         }else if(dIcoPlain.isSelected()){
             return 3;
+        }else if(dIcoPlainL.isSelected()){
+            return 4;
         }else{
             return 0;
         }
@@ -1379,6 +1398,7 @@ public class main extends javax.swing.JFrame {
     private javax.swing.JRadioButton dIcoDefault;
     private javax.swing.JRadioButton dIcoMaterial;
     private javax.swing.JRadioButton dIcoPlain;
+    private javax.swing.JRadioButton dIcoPlainL;
     private javax.swing.ButtonGroup dType;
     private javax.swing.JButton executeBtn;
     private javax.swing.JRadioButton g3Color;
