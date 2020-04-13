@@ -1344,7 +1344,8 @@ public class main extends javax.swing.JFrame {
     }
     void cleanupTask() throws IOException{
       Runtime run = Runtime.getRuntime();
-      run.exec("cleanup.exe");
+      String cmd[]={"sh","cleanup.sh"};
+      run.exec(cmd);
     }
     void colorParse(String color){
         if(color.length()>8){
