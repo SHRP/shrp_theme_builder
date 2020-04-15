@@ -157,6 +157,8 @@ public class Operation{
     }
     p=new PngTinter("files/bgRes/","out/res/");
     p.applyTint(backgroundColor);
+	p=new PngTinter("files\\bgRes2\\","out\\res\\");
+    p.applyTint(Operation.getNavBgColor(backgroundColor));
     switch(dashType){
       case 1:
         p=new PngTinter("files/dIco/dt1/","out/res/");
@@ -258,7 +260,7 @@ public class Operation{
         r++;
         x++;
       }
-        x=0;
+      x=0;
       while(g<255&&x<20){
         g++;
         x++;
@@ -266,6 +268,22 @@ public class Operation{
       x=0;
       while(b<255&&x<20){
         b++;
+        x++;
+      }
+    }else if(r>190&&g>190&&b>190){
+      x=0;
+      while(r>0&&x<20){
+        r--;
+        x++;
+      }
+      x=0;
+      while(g>0&&x<20){
+        g--;
+        x++;
+      }
+      x=0;
+      while(b>0&&x<20){
+        b--;
         x++;
       }
     }else if(r<128||g<128||b<128){
