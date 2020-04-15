@@ -142,7 +142,7 @@ public class Operation{
     dir=new File("out\\res\\");
     dir.mkdir();
     FileWriter mData = new FileWriter("out\\st.prop");
-    mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\naccColor="+primaryAccentColor+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
+    mData.write("themeName="+themeName+"\nbgColor="+backgroundColor+"\nnavBgColor="+Operation.getNavBgColor(backgroundColor)+"\naccColor="+primaryAccentColor+"\ntextColor="+textColor+"\nsTextColor="+stextColor);
     mData.flush();
     mData.close();
   }
@@ -155,6 +155,8 @@ public class Operation{
     }
     p=new PngTinter("files\\bgRes\\","out\\res\\");
     p.applyTint(backgroundColor);
+    p=new PngTinter("files\\bgRes2\\","out\\res\\");
+    p.applyTint(Operation.getNavBgColor(backgroundColor));
     switch(dashType){
       case 1:
         p=new PngTinter("files\\dIco\\dt1\\","out\\res\\");
@@ -199,8 +201,9 @@ public class Operation{
     }
   }
   static String getAvgColor(String c1,String c2){
-    int r,g,b;
-    int r2,g2,b2;
+    Integer r,g,b;
+    Integer r2,g2,b2;
+    String r1,g1,b1;
     if(c1.length()>8){
       r=Integer.parseInt(c1.substring(3,5),16);
       g=Integer.parseInt(c1.substring(5,7),16);
@@ -219,11 +222,116 @@ public class Operation{
       g2=Integer.parseInt(c2.substring(3,5),16);
       b2=Integer.parseInt(c2.substring(5,7),16);
     }
-    r=(r+r2)/2;
-    g=(g+g2)/2;
-    b=(b+b2)/2;
-    return ("#"+Integer.toHexString(r)+Integer.toHexString(g)+Integer.toHexString(b));
+    if(r<10){
+      r1="0"+Integer.toString(r);
+    }else{
+      r1=Integer.toHexString(r);
+    }
+    if(g<10){
+      g1="0"+Integer.toString(g);
+    }else{
+      g1=Integer.toHexString(g);
+    }
+    if(b<10){
+      b1="0"+Integer.toString(b);
+    }else{
+      b1=Integer.toHexString(b);
+    }
+    return ("#"+r1+g1+b1);
+  }
+  static String getNavBgColor(String c1){
+    Integer r,g,b;
+    int x;
+    String r1,g1,b1;
+    if(c1.length()>8){
+      r=Integer.parseInt(c1.substring(3,5),16);
+      g=Integer.parseInt(c1.substring(5,7),16);
+      b=Integer.parseInt(c1.substring(7,9),16);
+    }else{
+      r=Integer.parseInt(c1.substring(1,3),16);
+      g=Integer.parseInt(c1.substring(3,5),16);
+      b=Integer.parseInt(c1.substring(5,7),16);
+    }
+    if(r<60&&g<60&&b<60){
+      x=0;
+      while(r<255&&x<20){
+        r++;
+        x++;
+      }
+      x=0;
+      while(g<255&&x<20){
+        g++;
+        x++;
+      }
+      x=0;
+      while(b<255&&x<20){
+        b++;
+        x++;
+      }
+    }else if(r>190&&g>190&&b>190){
+      x=0;
+      while(r>0&&x<20){
+        r--;
+        x++;
+      }
+      x=0;
+      while(g>0&&x<20){
+        g--;
+        x++;
+      }
+      x=0;
+      while(b>0&&x<20){
+        b--;
+        x++;
+      }
+    }else if(r<128||g<128||b<128){
+        x=0;
+        while(r>0&&x<20){
+            r--;
+            x++;
+        }
+        x=0;
+        while(g>0&&x<20){
+            g--;
+            x++;
+        }
+        x=0;
+        while(b>0&&x<20){
+            b--;
+            x++;
+        }
+    }else if(r>=128||g>=128||b>=128){
+        x=0;
+        while(r<255&&x<20){
+            r++;
+            x++;
+        }
+        x=0;
+        while(g<255&&x<20){
+            g++;
+            x++;
+        }
+        x=0;
+        while(b<255&&x<20){
+            b++;
+            x++;
+        }
+    }
+    if(r<10){
+      r1="0"+Integer.toString(r);
+    }else{
+      r1=Integer.toHexString(r);
+    }
+    if(g<10){
+      g1="0"+Integer.toString(g);
+    }else{
+      g1=Integer.toHexString(g);
+    }
+    if(b<10){
+      b1="0"+Integer.toString(b);
+    }else{
+      b1=Integer.toHexString(b);
+    }
+    return ("#"+r1+g1+b1);
   }
 }
-
-
