@@ -157,7 +157,7 @@ public class Operation{
     }
     p=new PngTinter("files/bgRes/","out/res/");
     p.applyTint(backgroundColor);
-	p=new PngTinter("files\\bgRes2\\","out\\res\\");
+	p=new PngTinter("files/bgRes2/","out/res/");
     p.applyTint(Operation.getNavBgColor(backgroundColor));
     switch(dashType){
       case 1:
